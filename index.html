@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex">
+	<title>brainstack</title>
+	<link rel="stylesheet" href="./styles/style1.css">
+	<script src="./scripts/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="./scripts/testimony.js"></script>
+<link rel="stylesheet" href="./styles/testimony.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style>
+	li {
+    list-style: none;
+}
+.nav-link.active{
+	color: #007bff;
+}
+
+a {
+    text-decoration: none;
+}
+	.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.primary-nav > li {
+    margin-right: 18px;
+}
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475569;
+}
+
+.nav-link:hover{
+    color: #482ff7;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #482ff7;
+}
+.header{
+    border-bottom: 1px solid #E2E8F0;
+}
+.we-help-item:first-child .we-help-img {
+    margin-left: 0px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 2rem;
+}
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+	@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 6.5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+	.we-help-item:nth-child(2) .we-help-img {
+    margin-left: 54px;
+    margin-top: 0px;
+    margin-bottom: 51px;
+}
+.we-help-item:nth-child(2) .we-help-img {
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 51px;
+}
+
+    .nav-menu.active {
+        left: 0;
+		z-index: 999;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+}
+</style>
+</head>
+
+<body
+	class="home page-template page-template-templates page-template-home page-template-templateshome-php page page-id-2 twentyseventeen-front-page has-header-image page-two-column colors-light menuOverlap slidemenuRight desk">
+	<div class="site-wrapper">
+		<header class="header">
+			<nav class="navbar">
+				<a href="#" class="nav-logo" title="BrainStack"><img width="150" height="100" src="./assets/images/logo.png"
+					alt="BrainStack" class="lazyloaded" data-ll-status="loaded"><noscript><img width="150"
+						height="100" src="./assets/images/logo.png" alt="BrainStack" /></noscript></a>
+
+						<ul id=" menu-main-menu" class="nav-menu primary-nav">
+
+							<li class="nav-item">
+								<a href="./index.html" class="nav-link active">Home</a>
+							</li>
+							<li class="nav-item">
+								<a href="./about.html" class="nav-link">About Us</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Services</a>
+								<ul class="sub-menu sb-menu">
+									<li id="menu-item-498"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-498">
+										<a href="./webdevelopment.html">Website
+											Design and Development</a>
+									</li>
+									<li id="menu-item-496"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-496">
+										<a href="./digimarketing.html">Digital Marketing</a>
+									</li>
+									<li id="menu-item-494"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494">
+										<a href="./design.html">Mobile App Development</a>
+									</li>
+								</ul>
+							</li>
+							<li class="ctm-btn menu-item menu-item-type-post_type menu-item-object-page menu-item-49"><a
+								href="./contact.html">Contact us</a></li>
+							</li>
+						</ul>
+				<!-- <ul class="nav-menu">
+					<li class="nav-item">
+						<a href="#" class="nav-link">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">About Us</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Services</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Contact</a>
+					</li>
+				</ul> -->
+				<div class="hamburger">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+			</nav>
+		</header>
+		<!-- <header class="site-header">
+			<div class="container">
+				<div class="logo">
+					<a href="#" title="BrainStack"><img width="150" height="100" src="./assets/images/logo.png"
+							alt="BrainStack" class="lazyloaded" data-ll-status="loaded"><noscript><img width="150"
+								height="100" src="./assets/images/logo.png" alt="BrainStack" /></noscript></a>
+				</div>
+				<div class="enumenu_container">
+					<div class="menu-icon">
+						<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+							<i class="fa fa-bars"></i>
+						  </a>
+					</div>
+					<div class="site-navigation mob" id="myTopnav">
+						<ul id="menu-main-menu" class="primary-nav">
+							<li id="menu-item-389"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-389">
+								<a href="/" aria-current="page">Home</a>
+							</li>
+							<li id="menu-item-52"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52"><a
+									href="./about.html">About Us</a></li>
+							<li id="menu-item-590"
+								class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-590 has-children">
+								<a href="#" class="menubelow">Services</a>
+								<ul class="sub-menu sb-menu">
+									<li id="menu-item-498"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-498">
+										<a href="./webdevelopment.html">Website
+											Design and Development</a>
+									</li>
+									<li id="menu-item-496"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-496">
+										<a href="./digimarketing.html">Digital Marketing</a>
+									</li>
+									<li id="menu-item-494"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494">
+										<a href="./design.html">Designing
+											2D,3D Logo &amp; Animations</a>
+									</li>
+								</ul>
+							</li>
+							<li id="menu-item-49"
+								class="ctm-btn menu-item menu-item-type-post_type menu-item-object-page menu-item-49"><a
+									href="./contact.html">Contact us</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header> -->
+		<main class="main-container">
+			<section class="hero" style="
+			background-image: url('https://www.radiustheme.com/demo/html/digeco/digeco/media/banner/banner2.png');
+			background-repeat: no-repeat;">
+				<div class="container">
+					<div class="hero-content">
+						<h1 class="text-white" style="color:#fff">Technology Solutions That Are Your Stepping Stone For
+							Your Business <span class="highlight">Growth.</span></h1>
+						<p>The world is moving towards technology driven solutions for businesses on a very fast pace.
+							Leveraging technology for your business optimises the functioning in seamless and effective
+							way and has a great significance in the growth of your business.</p>
+						<div class="btn-grp">
+							<!-- <a href="./contact.html" title="Get an Estimate now" class="btn">Connect now</a> -->
+							<div class="talk-btn">
+								<span class="talk-btn-content pl-0"><img
+										src="./Website and App Design and Development Australia _ BrainStack_files/icon-phone.svg"
+										alt="" class="lazyloaded" data-ll-status="loaded"><noscript><img
+											src="https://www.brainstack.com.au/wp-content/themes/brainstack/assets/images/icon-phone.svg"
+											alt=""></noscript> Let’s Talk</span>
+								<a href="tel:04 21862263" title="Let’s Talk">04 21862263</a>
+							</div>
+						</div>
+						<!-- <span class="dot dot-1"></span>
+						<span class="dot dot-2"></span>
+						<span class="dot dot-3"></span>
+						<span class="dot dot-4"></span> -->
+					</div>
+					<div class="hero-image">
+						<style>
+							.hero-image:after {
+								background-image: url('./assets/images/banner2.png');
+								background-size: 80%;
+								background-repeat: no-repeat;
+							}
+						</style>
+					</div>
+				</div>
+			</section>
+
+			<br>
+			<section class="why-us">
+				<div class="container">
+					<div class="flex ">
+						<div class="form-content-left">
+							<h2>Why Choose Us?</h2>
+							<p>We understand it is not just a business for you. It is the way you brand yourself right
+								from the ideation to the execution, everything is important to us. We understand that
+								these are not mere interface solutions but are the modes to create your brand and build
+								your business and help to achieve all your goals and aspirations.
+								Our team is motivated to work hand-in-hand with you at every stage to ensure the outcome
+								is as desired.</p>
+
+						</div>
+
+						<div class="form-content-right" style="margin-top: 123px;">
+							<div class="contactmainform">
+								<h4><strong>Connect now!</strong></h4>
+								<div role="form" class="wpcf7" id="wpcf7-f405-o1" lang="en-US" dir="ltr">
+									<div class="screen-reader-response">
+										<p role="status" aria-live="polite" aria-atomic="true"></p>
+										<ul></ul>
+									</div>
+									<form action="https://www.brainstack.com.au/#wpcf7-f405-o1" method="post"
+										class="wpcf7-form init" novalidate="novalidate" data-status="init">
+										<div style="display: none;">
+											<input type="hidden" name="_wpcf7" value="405">
+											<input type="hidden" name="_wpcf7_version" value="5.4">
+											<input type="hidden" name="_wpcf7_locale" value="en_US">
+											<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f405-o1">
+											<input type="hidden" name="_wpcf7_container_post" value="0">
+											<input type="hidden" name="_wpcf7_posted_data_hash" value="">
+										</div>
+										<ul class="felem-list">
+											<li class="felem-item"><label>First Name *</label><span
+													class="wpcf7-form-control-wrap full-name"><input type="text"
+														name="full-name" value="" size="40"
+														class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+														aria-required="true" aria-invalid="false"></span></li>
+											<li class="felem-item"><label>Last Name *</label><span
+													class="wpcf7-form-control-wrap last-name"><input type="text"
+														name="last-name" value="" size="40"
+														class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+														aria-required="true" aria-invalid="false"></span></li>
+											<li class="felem-item"><label>Mobile *</label><span
+													class="wpcf7-form-control-wrap phone-number"><input type="tel"
+														name="phone-number" value="" size="40"
+														class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel"
+														aria-required="true" aria-invalid="false"></span></li>
+											<li class="felem-item"><label>E-mail *</label><span
+													class="wpcf7-form-control-wrap email"><input type="email"
+														name="email" value="" size="40"
+														class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+														aria-required="true" aria-invalid="false"></span></li>
+											
+											<li class="felem-item full submit-wrap"><input type="submit"
+													value="Get Started" class="wpcf7-form-control wpcf7-submit btn"
+													aria-invalid="false"><span class="ajax-loader"></span></li>
+											<div class="wpcf7-response-output" aria-hidden="true"></div>
+										</ul>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+
+			<section class="we-help" style="
+			background-image: url('https://rstheme.com/products/html/braintech/assets/images/banner/style2/banner-9.jpg');
+			background-repeat: no-repeat;">
+				<div class="container">
+					<div class="we-help-content mb-5">
+						<h2>Our Solutions To Establish And Grow Your Business</h2>
+					</div>
+					<div class="we-help-block">
+
+						<div class="we-help-item">
+							<figure class="we-help-img">
+								<!-- <a href="#"> -->
+									<img
+										src="./assets/images_all/help-digital-marketing.svg"
+										alt=""
+										data-lazy-src="./assets/images_all/help-digital-marketing.svg">
+									<!-- </a> -->
+							</figure>
+							<div class="we-help-item-content">
+								<h4>Digital Marketing</h4>
+								<p>Choosing the right social media platforms for your business and reaching your target
+									group is important. You not only create a brand value, you connect with your
+									customers and can track your result oriented marketing is a great opportunity in
+									digital marketing and there is no dearth of visibility, as the whole globe is your
+									market place. It is digital marketing that helps you to position your business
+									globally.</p>
+								<a href="#" class="find_out_more">Find
+									out more</a>
+							</div>
+						</div>
+
+
+						<div class="we-help-item">
+							<figure class="we-help-img">
+								<!-- <a href="#"> -->
+									<img
+										src="./assets/images_all/help-web-dev.svg"
+										alt=""
+										data-lazy-src="./assets/images_all/help-web-dev.svg">
+									<!-- </a> -->
+							</figure>
+							<div class="we-help-item-content">
+								<h4>Web App Development</h4>
+								<p>Just give us the idea and we will execute it for you. Let us know how you want your
+									app to be and we will ensure that your app is best in the industry involving our
+									best resources with great expertise using high standard and latest technology to
+									leverage.</p>
+								<a href="#" class="find_out_more">Find out more</a>
+							</div>
+						</div>
+
+
+						<!-- <div class="we-help-item">
+							<figure class="we-help-img">
+								<a
+									href="https://www.brainstack.com.au/services/australian-affordable-mobile-app-development/"><img
+										src=" http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%200%200&#39;%3E%3C/svg%3E"
+										alt=""
+										data-lazy-src="./assets/images_all/help-mob-dev.svg"><noscript><img
+											src="./assets/images_all/help-mob-dev.svg"
+											alt="" /></noscript></a>
+							</figure>
+							<div class="we-help-item-content">
+								<h4>Mobile App Development</h4>
+								<p>Let’s make your idea for a mobile web app, a reality. We create software applications
+									that run on mobile devices, designed for network connection to remote computing
+									resources.</p>
+								<a href="https://www.brainstack.com.au/services/australian-affordable-mobile-app-development/"
+									class="find_out_more">Find out more</a>
+							</div>
+						</div> -->
+
+
+						<!-- <div class="we-help-item">
+							<figure class="we-help-img">
+								<a href="https://www.brainstack.com.au/game-developments/"><img
+										src=" http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%200%200&#39;%3E%3C/svg%3E"
+										alt=""
+										data-lazy-src="./assets/images_all/help-game-dev.svg"><noscript><img
+											src="./assets/images_all/help-game-dev.svg"
+											alt="" /></noscript></a>
+							</figure>
+							<div class="we-help-item-content">
+								<h4>Game Development</h4>
+								<p>Have an idea for a video game? Let’s make it a reality. Our developers and designers
+									take on your concepts and make them playable. We program games for multiple formats,
+									such as PCs, current video game consoles, web browsers, and mobile phones.</p>
+								<a href="https://www.brainstack.com.au/game-developments/" class="find_out_more">Find
+									out more</a>
+							</div>
+						</div> -->
+
+
+						<div class="we-help-item">
+							<figure class="we-help-img">
+								<!-- <a href="#"> -->
+									<img
+										src="./assets/images_all/help-designing.svg"
+										alt=""
+										data-lazy-src="./assets/images_all/help-designing.svg">
+									<!-- </a> -->
+							</figure>
+							<div class="we-help-item-content">
+								<h4>Designing</h4>
+								<p>Our team understands your business and works on strategies to build your brand and
+									how to position it in the market. We understand that the design is all about what
+									and how you would like to convey to your customers. It is an effective communication
+									medium to get the best visibility, mileage and engagement from your customers. And
+									we ensure of our best graphic designing.</p>
+								<a href="#" class="find_out_more">Find out more</a>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+			<section class="build">
+				<div class="container">
+					<div class="build-content">
+						<h2>You Aspire and We Deliver The Best Technology Leveraged Solution!</h2>
+						<div class="build-content-inner">
+							<p>We understand it is not just a business for you, likewise it is not just a business for us too. We want to be your partner in your business growth providing the best and timely solutions that help in effective communication and branding.<br>
+								<a href="./contact.html" title="Schedule a meeting now" class="btn"
+									style="border: 2px solid #fff;display: block;width: 200px;">Schedule a meeting now</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="recent">
+				<div class="my-5 build-content text-center">
+					<!-- <h2>Client Reviews</h2> -->
+					<a class="ribbon-btn"> Client Reviews </a>
+					<!-- <img style="display: inline;" src="./assets/images/testemonials.png" alt="Testemonials" > -->
+				</div>
+				
+				<div class="owl-carousel owl-theme">
+					<div class="item first prev">
+						<div class="card border-0 py-3 px-4 mb-2 mt-2">
+							<p class="content mb-5 mx-2">It is the outcome of collaborative work with dedication. We are happy with the way....have taken up our project and executed it with precision.</p>
+							<h6 class="mb-3 mt-2"> Set right Automotives</h6>
+						</div>
+					</div>
+					<div class="item show">
+						<div class="card border-0 py-3 px-4 mb-2 mt-2">
+							<p class="content mb-5 mx-2">This team has the understanding of minute details and keeps focus on customer engagement and that can be seen in the solutions that have been proposed and delivered for us.</p>
+							<h6 class="mb-3 mt-2">Brown burgers  </h6>
+						</div>
+					</div>
+					<!-- <div class="item show">
+						<div class="card border-0 py-3 px-4 mb-2 mt-2">
+							<p class="content mb-5 mx-2">We did not want to be yet another restaurant in our industry and were keen on partnering with someone who would help us create the niche market for us. We chose them and are very happy with their services..Keep it up!</p>
+						</div>
+					</div> -->
+					<div class="item next">
+						<div class="card border-0 py-3 px-4 mb-2 mt-2">
+							<p class="content mb-5 mx-2">We could reach many people and we could see business growth after .....started working on our profile. They have an immense sense of what, where, and how to position a brand.</p>
+							<h6 class="mb-3 mt-2">Daawat “ Indian invitation” cuisine</h6>
+						</div>
+					</div>
+					<div class="item last">
+						<div class="card border-0 py-3 px-4 mb-2 mt-2">
+							<p class="content mb-5 mx-2">Luna cafe has become a renowned name thanks to the team. They not only helped us in increasing our visibility in the market, their strategies have helped in pitching the right services and products. We are thankful to the team.</p>
+							<h6 class="mb-3 mt-2">Luna cafe</h6>
+						</div>
+					</div>
+					
+				</div>
+			</section>
+
+
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-bottom">
+					<div class="footer-contact">
+						<ul class="footer-contact-links">
+							<li><a href="tel:04 21862263" title="Call us">04 21862263</a></li>
+							<li><a href="mailto:info@brain-stack.io" title="Mail us">info@brain-stack.io</a></li>
+						</ul>
+
+						<ul class="social mb-2">
+							<li><a href="https://www.instagram.com/brain.stack/" target="_blank"
+									rel="noopener noreferrer" title="Instagram"><img
+										src="https://www.brainstack.com.au/wp-content/uploads/2021/02/instagram-brainstack.svg"
+										alt="Instagram" class="lazyloaded" data-ll-status="loaded"></a></li>
+
+							<li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
+									title="facebook"><img
+										src="./assets/images_all/social-fb.svg"
+										alt="facebook" class="lazyloaded" data-ll-status="loaded"></a></li>
+
+							<li><a href="https://www.linkedin.com/company/brain-stack/" target="_blank" rel="noopener noreferrer"
+									title="linkedin"><img
+										src="./assets/images_all/social-linkedin.svg"
+										alt="linkedin" class="lazyloaded" data-ll-status="loaded"></a></li>
+						</ul>
+					</div>
+					<div class="footer-copy">
+
+						<ul class="sociallast">
+							<li><a href="./index.html" target="_blank" rel="noopener noreferrer" title=""
+									style="background: transparent;width: auto;">Home</a></li>
+							<li><a href="./about.html" target="_blank" rel="noopener noreferrer" title=""
+									style="background: transparent;width: auto;">About Us</a></li>
+							<li><a href="./contact.html" target="_blank" rel="noopener noreferrer" title=""
+									style="background: transparent;width: auto;">Contact us</a></li>
+							<li><a href="#" target="_blank" rel="noopener noreferrer" title=""
+									style="background: transparent;width: auto;margin-left: 60px;">© Copyright 2021</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<!-- <script>
+		function myFunction() {
+		  var x = document.getElementById("myTopnav");
+		  if (x.className === "site-header") {
+			x.className += " responsive";
+		  } else {
+			x.className = "site-header";
+		  }
+		}
+	</script> -->
+<script>
+	const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+const navLink = document.querySelectorAll(".nav-link");
+
+hamburger.addEventListener("click", mobileMenu);
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+</script>
+
+</body>
+
+</html>

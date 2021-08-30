@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>brainstack</title>
+    <link rel="stylesheet" href="./styles/style1.css">
+    <!-- <script src="./scripts/jquery.min.js"></script> -->
+    <style>
+        li {
+            list-style: none;
+        }
+
+        .nav-link.active {
+            color: #007bff;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .primary-nav>li {
+            margin-right: 18px;
+        }
+
+        .nav-item {
+            margin-left: 5rem;
+        }
+
+        .nav-link {
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: #475569;
+        }
+
+        .nav-link:hover {
+            color: #482ff7;
+        }
+
+        .nav-logo {
+            font-size: 2.1rem;
+            font-weight: 500;
+            color: #482ff7;
+        }
+
+        .header {
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        .we-help-item:first-child .we-help-img {
+            margin-left: 0px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0rem 2rem;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            background-color: #101010;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 6.5rem;
+                flex-direction: column;
+                background-color: #fff;
+                width: 100%;
+                border-radius: 10px;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow:
+                    0 10px 27px rgba(0, 0, 0, 0.05);
+            }
+
+            .we-help-item:nth-child(2) .we-help-img {
+                margin-left: 54px;
+                margin-top: 0px;
+                margin-bottom: 51px;
+            }
+
+            .we-help-item:nth-child(2) .we-help-img {
+                margin-left: 0px;
+                margin-top: 0px;
+                margin-bottom: 51px;
+            }
+
+            .nav-menu.active {
+                left: 0;
+                z-index: 999;
+            }
+
+            .nav-item {
+                margin: 2.5rem 0;
+            }
+
+            .hamburger {
+                display: block;
+                cursor: pointer;
+            }
+
+        }
+    </style>
+    <style type="text/css" id="wp-custom-css">
+        @media (max-width: 550px) and (min-width: 200px) {
+            .logo a {
+                width: 170px !important;
+                height: auto !important;
+            }
+
+            .why-list {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .why-list-item {
+                width: 100% !important;
+                padding: 15px !important;
+                margin-bottom: 23px !important;
+            }
+
+            .link {
+                font-size: 14px !important;
+                margin-top: 10px !important;
+            }
+
+            .we-help-item {
+                /*margin-bottom: 35px !important;*/
+            }
+
+            .why-list-icon img {
+                max-width: calc(100% - 10px) !important;
+                max-height: 30px !important;
+            }
+
+            .why-list-icon {
+                width: 50px !important;
+                height: 50px !important;
+                border-radius: 50%;
+            }
+
+            .slick-track {
+                /* width: 5800px !important;
+    height: 370px !important;*/
+            }
+
+            .slick-slide {
+                /*width: 410px !important;*/
+            }
+
+            .slick-dots {
+                /*width: 100% !important;*/
+            }
+
+            .hero {
+                padding: 90px 0 64px !important;
+            }
+
+            .hero-about-img {
+                width: 100%;
+                height: auto;
+                position: static;
+                margin-left: 0px;
+                margin-bottom: 25px;
+            }
+
+            .team-item {
+                width: 100%;
+                margin-bottom: 25px !important;
+            }
+        }
+
+        @media (max-width: 900px) and (min-width: 550px) {
+            h1 {
+                font-size: 30px !important;
+            }
+
+            p {
+                font-size: 16px !important;
+            }
+
+            .btn,
+            [type=button],
+            [type=reset],
+            [type=submit] {
+                font-size: 16px !important;
+            }
+
+            h3 {
+                font-size: 20px !important;
+            }
+
+            .build-content-inner {
+                width: 85% !important;
+            }
+
+            .slick-track {
+                width: 5000px !important;
+                height: 190px !important;
+            }
+
+            .slick-slide {
+                width: 350px !important;
+            }
+
+            h4 {
+                font-size: 16px !important;
+                margin-bottom: 8px !important;
+            }
+
+            .footer-logo {
+                font-size: 25px !important;
+            }
+
+            .footer-info p {
+                font-size: 16px !important;
+            }
+
+            .footer-nav ul li {
+                margin-bottom: 10px !important;
+            }
+
+            .link {
+                margin-top: 20px !important;
+            }
+
+            .we-help-item p {
+                padding: 0px !important;
+                text-align: center;
+            }
+
+            .we-help-item h4 {
+                text-align: center !important;
+                padding: 0px !important;
+            }
+        }
+
+        @media (max-width : 991px) and (min-width : 768px) {
+
+            .hero-blog-content h1.hero-shape-content h1,
+            .hero-generic-content h1 {
+                font-size: 25px !important;
+                padding-right: 50px !important;
+            }
+
+            .hero-shape-content p {
+                padding-right: 60px !important;
+            }
+        }
+
+        @media (max-width : 1199px) and (min-width : 992px) {
+
+            .hero-shape-content h1,
+            .hero-generic-content h1 {
+                font-size: 30px !important;
+                padding-right: 60px !important;
+            }
+
+            .hero-shape-img {
+                width: 400px !important;
+                height: 400px !important;
+            }
+
+            .hero-shape-img:before {
+                width: 400px !important;
+                height: 385px !important;
+            }
+
+            .hero-shape-content p,
+            .hero-generic-content p {
+                padding-right: 50px !important;
+            }
+        }
+
+        @media (max-width : 1240px) and (min-width : 1200px) {
+
+            .hero-shape-content p,
+            .hero-generic-content p {
+                padding-right: 50px !important;
+            }
+
+            .hero-shape-img {
+                width: 465px !important;
+                height: 400px !important;
+            }
+
+            .hero-shape-content h1,
+            .blog-head-content h1,
+            .hero-generic-content h1 {
+                font-size: 26px !important;
+                padding-right: 100px !important;
+
+            }
+
+            .hero-shape-img:after,
+            .hero-generic-img:after {
+                right: 380px !important;
+            }
+
+            .hero-shape-img img,
+            .hero-generic-img img {
+                width: 420px !important;
+            }
+
+            .hero-shape-img:before,
+            .hero-generic-img:before {
+                width: 420px !important;
+                height: 380px !important;
+            }
+        }
+
+        @media (max-width : 1366px) and (min-width : 1241px) {
+
+            .hero-shape-content h1,
+            .blog-head-content h1,
+            .hero-generic-content h1 {
+                font-size: 28px !important;
+                padding-right: 60px !important;
+            }
+
+            .hero-shape-img {
+                width: 465px !important;
+                height: 400px !important;
+            }
+
+            .hero-shape-content p,
+            .hero-generic-content p {
+                padding-right: 70px !important;
+            }
+
+            .hero-shape-img:before,
+            .hero-generic-img:before {
+                width: 400px !important;
+                height: 360px !important;
+            }
+
+            .hero-shape-img img,
+            .hero-generic-img img {
+                width: 400px !important;
+            }
+
+            .hero-shape-img:after,
+            .hero-generic-img:after {
+                right: 340px !important;
+            }
+        }
+
+        @media (max-width : 1431px) and (min-width : 1367px) {
+
+            .hero-shape-content h1,
+            .blog-head-content h1,
+            .hero-generic-content h1 {
+                font-size: 36px !important;
+                padding-right: 80px !important;
+            }
+
+            .hero-shape-img {
+                width: 544px !important;
+                height: 400px !important;
+            }
+
+            .hero-shape-content p,
+            .hero-generic-content p {
+                font-size: 18px !important;
+                padding-right: 70px !important;
+            }
+
+            .hero-shape-img:after,
+            .hero-generic-img:after {
+                right: 370px !important;
+            }
+
+            .hero-shape-img img,
+            .hero-generic-img img {
+                width: 450px !important;
+            }
+
+            .hero-shape-img:before,
+            .hero-generic-img:before {
+                width: 430px !important;
+                height: 400px !important;
+            }
+        }
+
+        @media (min-width: 1432px) {
+
+            .hero-shape-content p,
+            .hero-generic-content p {
+                font-size: 18px;
+                padding-right: 120px;
+            }
+
+            .hero-shape-img:after,
+            .hero-generic-img:after {
+                right: 370px !important;
+            }
+
+            .hero-shape-img img,
+            .hero-generic-img img {
+                width: 450px !important;
+            }
+
+            .hero-shape-img:before,
+            .hero-generic-img:before {
+                width: 430px !important;
+                height: 400px !important;
+            }
+
+            .hero-shape-img {
+                width: 555px !important;
+                height: 400px !important;
+            }
+        }
+    </style>
+    <script>
+        /*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+        (function (w) {
+            "use strict"; if (!w.loadCSS) { w.loadCSS = function () { } }
+            var rp = loadCSS.relpreload = {}; rp.support = (function () {
+                var ret; try { ret = w.document.createElement("link").relList.supports("preload") } catch (e) { ret = !1 }
+                return function () { return ret }
+            })(); rp.bindMediaToggle = function (link) {
+                var finalMedia = link.media || "all"; function enableStylesheet() { link.media = finalMedia }
+                if (link.addEventListener) { link.addEventListener("load", enableStylesheet) } else if (link.attachEvent) { link.attachEvent("onload", enableStylesheet) }
+                setTimeout(function () { link.rel = "stylesheet"; link.media = "only x" }); setTimeout(enableStylesheet, 3000)
+            }; rp.poly = function () {
+                if (rp.support()) { return }
+                var links = w.document.getElementsByTagName("link"); for (var i = 0; i < links.length; i++) { var link = links[i]; if (link.rel === "preload" && link.getAttribute("as") === "style" && !link.getAttribute("data-loadcss")) { link.setAttribute("data-loadcss", !0); rp.bindMediaToggle(link) } }
+            }; if (!rp.support()) { rp.poly(); var run = w.setInterval(rp.poly, 500); if (w.addEventListener) { w.addEventListener("load", function () { rp.poly(); w.clearInterval(run) }) } else if (w.attachEvent) { w.attachEvent("onload", function () { rp.poly(); w.clearInterval(run) }) } }
+            if (typeof exports !== "undefined") { exports.loadCSS = loadCSS }
+            else { w.loadCSS = loadCSS }
+        }(typeof global !== "undefined" ? global : this))
+    </script>
+</head>
+
+<body
+    class="home page-template page-template-templates page-template-home page-template-templateshome-php page page-id-2 twentyseventeen-front-page has-header-image page-two-column colors-light menuOverlap slidemenuRight desk">
+    <div class="site-wrapper">
+        <header class="header">
+            <nav class="navbar">
+                <a href="#" class="nav-logo" title="BrainStack"><img width="150" height="100"
+                        src="./assets/images/logo.png" alt="BrainStack" class="lazyloaded"
+                        data-ll-status="loaded"><noscript><img width="150" height="100" src="./assets/images/logo.png"
+                            alt="BrainStack" /></noscript></a>
+
+                <ul id=" menu-main-menu" class="nav-menu primary-nav">
+
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./about.html" class="nav-link active">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Services</a>
+                        <ul class="sub-menu sb-menu">
+                            <li id="menu-item-498" class="">
+                                <a href="./webdevelopment.html">Website
+                                    Design and Development</a>
+                            </li>
+                            <li id="menu-item-496"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-496">
+                                <a href="./digimarketing.html">Digital Marketing</a>
+                            </li>
+                            <li id="menu-item-494"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494">
+                                <a href="./design.html">Mobile App Development</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ctm-btn menu-item menu-item-type-post_type menu-item-object-page menu-item-49 ">
+                        <a href="./contact.html">Contact us</a></li>
+                    </li>
+                </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+        <main class="main-container">
+            <section class="hero-about">
+                <!-- <div class="container">
+                    <h1>Who we are?</h1>
+                </div> -->
+                <div class="hero-about-wrap">
+                    <div class="container">
+                        <div class="hero-about-img">
+                            <img width="836" height="631"
+                                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=763&q=80"
+                                alt="Who we are?" class="lazyloaded" data-ll-status="loaded">
+                            <!-- <noscript><img width="836"
+                                    height="631"
+                                    src="https://www.brainstack.com.au/wp-content/uploads/2021/01/home-about.png"
+                                    alt="Who we are?"></noscript> -->
+                        </div>
+                        <div class="hero-about-content">
+
+                            <p style="font-size: larger;"> with vast expertise and ability to leverage resources to
+                                build customized solutions right
+                                from development , integration to execution with our analytic and innovative approach
+                                for a positive outcome.
+                                It is our endeavor to offer technology integrated solutions that help our customers
+                                build their business effectively and we be an integral part of their growth story.
+                                Our focus has always been in giving simple yet effective solutions that support the
+                                smooth functioning of businesses. Be it software development, Network, Digital
+                                Marketing, Agile program delivery, SaaS product development, and team leadership
+                                services we will deliver the best sustainable solutions.</p>
+                            <h1 class="mb-4" style="text-align: start;">We are</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="connect-sec">
+                <div class="container">
+                    <div class="connect-sec-wrap">
+                        <div class="connect-sec-content">
+                            <h2>Chat with us</h2>
+                            <p>We leverage technology and innovation to offer you what is required for your business. To
+                                understand how we do it, do connect with our expert.</span></p>
+                        </div>
+                        <a href="./contact.html" title="Let’s Chat" class="btn">Let’s Chat</a>
+                    </div>
+                    <!-- <div class="connect-sec-img">
+                        <img width="1175" height="694"
+                            src="https://www.brainstack.com.au/wp-content/themes/brainstack/assets/images/connect.png"
+                            alt="" class="lazyloaded" data-ll-status="loaded"><noscript><img width="1175" height="694"
+                                src="https://www.brainstack.com.au/wp-content/themes/brainstack/assets/images/connect.png"
+                                alt=""></noscript>
+                    </div> -->
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <!-- <div class="footer-info">
+
+					<a href="#" title="Logo" class="footer-logo"><img src="./assets/images/logo.png"
+							alt="BrainStack Logo" width="150"
+							data-lazy-src="https://brainstack.com.au/wp-content/uploads/2021/02/brainstack_logo_hd.png"></a>
+					<p>“The team at&nbsp;BrainStack Technologies covers a diverse range of company needs. The services
+						we provide are lead by experienced, creative, and free-thinking professionals. Each service is
+						designed to work with you help turn your ideas into reality.”</p>
+				</div>
+				<div class="footer-links">
+					<div class="footer-nav">
+						<h4>Resources</h4>
+						<ul id="menu-resources" class="menu">
+							<li id="menu-item-388"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-388">
+								<a href="#" aria-current="page">Home</a>
+							</li>
+							<li id="menu-item-55"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55"><a
+									href="#">About Us</a></li>
+							<li id="menu-item-591"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-591"><a
+									href="#">Contact us</a></li>
+						</ul>
+					</div>
+					<div class="footer-nav">
+						<h4>Legal</h4>
+						<ul id="menu-legal" class="menu">
+							<li id="menu-item-535"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-535">
+								<a href="#">Privacy Policy</a>
+							</li>
+							<li id="menu-item-534"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-534"><a
+									href="#">Terms And Conditions</a>
+							</li>
+						</ul>
+					</div>
+				</div> -->
+
+                <div class="footer-bottom">
+                    <div class="footer-contact">
+                        <ul class="footer-contact-links">
+                            <li><a href="tel:04 21862263" title="Call us">04 21862263</a></li>
+                            <li><a href="mailto:info@brain-stack.io" title="Mail us">info@brain-stack.io</a></li>
+                        </ul>
+
+                        <ul class="social">
+                            <li><a href="https://www.instagram.com/brain.stack/" target="_blank"
+                                    rel="noopener noreferrer" title="Instagram"><img
+                                        src="https://www.brainstack.com.au/wp-content/uploads/2021/02/instagram-brainstack.svg"
+                                        alt="Instagram" class="lazyloaded" data-ll-status="loaded"><noscript><img
+                                            src="https://www.brainstack.com.au/wp-content/uploads/2021/02/instagram-brainstack.svg"
+                                            alt="Instagram" /></noscript></a></li>
+
+                            <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
+                                    title="facebook"><img
+                                        src="https://www.brainstack.com.au/wp-content/uploads/2021/01/social-fb.svg"
+                                        alt="facebook" class="lazyloaded" data-ll-status="loaded"><noscript><img
+                                            src="https://www.brainstack.com.au/wp-content/uploads/2021/01/social-fb.svg"
+                                            alt="facebook" /></noscript></a></li>
+
+                            <li><a href="https://www.linkedin.com/company/brain-stack/" target="_blank"
+                                    rel="noopener noreferrer" title="linkedin"><img
+                                        src="https://www.brainstack.com.au/wp-content/uploads/2021/01/social-linkedin.svg"
+                                        alt="linkedin" class="lazyloaded" data-ll-status="loaded"><noscript><img
+                                            src="https://www.brainstack.com.au/wp-content/uploads/2021/01/social-linkedin.svg"
+                                            alt="linkedin" /></noscript></a></li>
+
+                        </ul>
+
+                    </div>
+                    <!-- <div class="footer-copy">
+
+                        <ul class="social">
+                            <li><a href="#" target="_blank" rel="noopener noreferrer" title=""
+                                    style="background: transparent;width: auto;">Home</a></li>
+                            <li><a href="#" target="_blank" rel="noopener noreferrer" title=""
+                                    style="background: transparent;width: auto;">About Us</a></li>
+                            <li><a href="#" target="_blank" rel="noopener noreferrer" title=""
+                                    style="background: transparent;width: auto;">Contact us</a></li>
+                            <li><a href="#" target="_blank" rel="noopener noreferrer" title=""
+                                    style="background: transparent;width: auto;margin-left: 60px;">© Copyright 2021</a>
+                            </li>
+                        </ul>
+                    </div> -->
+                    <div class="footer-copy">
+
+                        <ul class="sociallast">
+                            <li><a href="./index.html" target="_blank" rel="noopener noreferrer" title=""
+                                    style="background: transparent;width: auto;">Home</a></li>
+                            <li><a href="./about.html" target="_blank" rel="noopener noreferrer" title=""
+                                    style="background: transparent;width: auto;">About Us</a></li>
+                            <li><a href="./contact.html" target="_blank" rel="noopener noreferrer" title=""
+                                    style="background: transparent;width: auto;">Contact us</a></li>
+                            <li><a href="#" target="_blank" rel="noopener noreferrer" title=""
+                                    style="background: transparent;width: auto;margin-left: 60px;">© Copyright 2021</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+        const navLink = document.querySelectorAll(".nav-link");
+
+        hamburger.addEventListener("click", mobileMenu);
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+    </script>
+</body>
+
+</html>
